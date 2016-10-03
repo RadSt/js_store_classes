@@ -29,8 +29,8 @@
       <file leaf-file-name="store.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+            <state relative-caret-position="590">
+              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
-    <option name="width" value="1923" />
+    <option name="width" value="1926" />
     <option name="height" value="1092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -196,7 +196,7 @@
       <workItem from="1475516126265" duration="153000" />
       <workItem from="1475516293963" duration="25000" />
       <workItem from="1475516378123" duration="7000" />
-      <workItem from="1475516848876" duration="3015000" />
+      <workItem from="1475516848876" duration="3768000" />
     </task>
     <task id="LOCAL-00001" summary="Провел перименование переменной frequentRenterPoints, поправил ошибки в коде.">
       <created>1474737527843</created>
@@ -471,11 +471,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475519710442</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Заинлайнил getMovie.">
+      <created>1475519886297</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1475519886297</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21858000" />
+    <option name="totallyTimeSpent" value="22611000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -487,7 +494,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="0" width="1923" height="1092" extended-state="0" />
+    <frame x="-9" y="0" width="1926" height="1092" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08753315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -496,7 +503,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19417475" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25674218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25674218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998413" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -539,7 +546,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Упростил функцию getFrequentTotalRenterPoints, убрал временыые переменные movie" />
     <MESSAGE value="Упростил функцию getFrequentTotalRenterPoints, убрал временыые переменные movie и amount" />
     <MESSAGE value="Вынес функцию addFooterLines." />
     <MESSAGE value="Разделил действия в цикле на 3 части." />
@@ -564,7 +570,8 @@
     <MESSAGE value="Вынес обьект rental в класс Rental." />
     <MESSAGE value="Пробросил переменную movies в класс Rental." />
     <MESSAGE value="Вынес фунукцию getMovie в класс Rental.&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вынес фунукцию getMovie в класс Rental.&#10;" />
+    <MESSAGE value="Заинлайнил getMovie." />
+    <option name="LAST_COMMIT_MESSAGE" value="Заинлайнил getMovie." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -648,8 +655,8 @@
     <entry file="file://$PROJECT_DIR$/../js_videostore_for_classes/store.js" />
     <entry file="file://$PROJECT_DIR$/store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+        <state relative-caret-position="590">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
           <folding />
         </state>
       </provider>

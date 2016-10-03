@@ -15,6 +15,14 @@ class Customer {
       }
   return frequentTotalRenterPoints;
   }
+  get totalAmount() {
+      let totalAmount = 0;
+      for (let rental of this.rentals) {
+
+          totalAmount += rental.amount;
+      }
+      return totalAmount;
+  }
 }
 
 
@@ -32,7 +40,7 @@ class Rental{
   }
 
     get amount() {
-    let thisAmount = 0
+    let thisAmount = 0;
 
     switch (this.movie.code) {
         case "regular":
@@ -57,7 +65,7 @@ function statement(customerArg, movies) {
   for (let rental of customer.rentals) {
       result += `\t${rental.movie.title}\t${rental.amount}\n`;
   }
-    result += addFooterLines(getTotalAmount(customer), customer.totalFrequentRenterPoints);
+    result += addFooterLines(customer.totalAmount, customer.totalFrequentRenterPoints);
     return result;
 
   function addFooterLines(totalAmount, frequentTotalRenterPoints){
@@ -65,15 +73,6 @@ function statement(customerArg, movies) {
     result += `Amount owed is ${totalAmount}\n`;
     result += `You earned ${frequentTotalRenterPoints} frequent renter points\n`;
     return result;
-  }
-
-  function getTotalAmount(customer){
-    let totalAmount = 0;
-    for (let rental of customer.rentals) {
-
-      totalAmount += rental.amount;
-    }
-    return totalAmount;
   }
 
   }

@@ -7,8 +7,16 @@ class Customer {
   }
 
   get name(){return this._data.name;}
-  get rentals() {return this._data.rentals.map(r => new Rental(r, this._movies));}
+  get rentals() {return this._data.rentals.map(r => new Rental(r, this._movies))};
+  get totalFrequentRenterPoints() {
+      let frequentTotalRenterPoints = 0;
+      for (let rental of this.rentals) {
+          frequentTotalRenterPoints += rental.frequentRenterPoints;
+      }
+  return frequentTotalRenterPoints;
+  }
 }
+
 
 class Rental{
   constructor(data, movies){
@@ -32,8 +40,8 @@ function statement(customerArg, movies) {
   for (let rental of customer.rentals) {
       result += `\t${rental.movie.title}\t${getAmount(rental)}\n`;
   }
-  result += addFooterLines(getTotalAmount(customer), getFrequentTotalRenterPoints(customer));
-  return result;
+    result += addFooterLines(getTotalAmount(customer), customer.totalFrequentRenterPoints);
+    return result;
 
   function getAmount(rental){
     let thisAmount = 0
@@ -68,14 +76,7 @@ function statement(customerArg, movies) {
     return totalAmount;
   }
 
-  function getFrequentTotalRenterPoints(customer){
-    let frequentTotalRenterPoints = 0;
-    for (let rental of customer.rentals) {
-        frequentTotalRenterPoints += rental.frequentRenterPoints;
-    }
-    return frequentTotalRenterPoints;
   }
-}
 
 let customer = {
   name: "martin",

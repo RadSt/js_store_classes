@@ -16,12 +16,7 @@ class Customer {
   return frequentTotalRenterPoints;
   }
   get totalAmount() {
-      let totalAmount = 0;
-      for (let rental of this.rentals) {
-
-          totalAmount += rental.amount;
-      }
-      return totalAmount;
+      return this.rentals.reduce((total, r) => total + r.amount, 0 );
   }
 }
 
@@ -74,8 +69,7 @@ function statement(customerArg, movies) {
     result += `You earned ${frequentTotalRenterPoints} frequent renter points\n`;
     return result;
   }
-
-  }
+}
 
 let customer = {
   name: "martin",

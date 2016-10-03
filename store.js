@@ -59,12 +59,26 @@ function statement(customerArg, movies) {
     result += addFooterLines(customer.totalAmount, customer.totalFrequentRenterPoints);
     return result;
 
-  function addFooterLines(totalAmount, frequentTotalRenterPoints){
+  function addFooterLines(totalAmount, totalFrequentRenterPoints){
     let result = "";
     result += `Amount owed is ${totalAmount}\n`;
-    result += `You earned ${frequentTotalRenterPoints} frequent renter points\n`;
+    result += `You earned ${totalFrequentRenterPoints} frequent renter points\n`;
     return result;
   }
+}
+
+function statementHtml(customerArg, movies) {
+    const customer = new Customer(customerArg, movies);
+
+    let result = `<h1>Rental Record for ${customer.name}</h1>\n`;
+    result += '<table>\n';
+    for (let rental of customer.rentals) {
+        result += `<tr><td>${rental.movie.title}</td><td>${rental.amount}</td></tr>\n`;
+    }
+    result += '</table>\n';
+    result += `<p>Amount owed is<em>${customer.totalAmount}</em></p>\n`;
+    result += `<p>You earned<em>${customer.totalFrequentRenterPoints}</em></p>\n`;
+    return result;
 }
 
 let customer = {
@@ -91,3 +105,4 @@ let movies = {
 };
 
 console.log(statement(customer, movies));
+console.log(statementHtml(customer, movies));

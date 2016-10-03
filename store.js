@@ -1,17 +1,19 @@
 "use strict";
 
 class Customer {
-  constructor(data){
+  constructor(data, movies){
     this._data = data;
+    this._movies = movies;
   }
 
   get name(){return this._data.name;}
-  get rentals() {return this._data.rentals.map(r => new Rental(r));}
+  get rentals() {return this._data.rentals.map(r => new Rental(r, this._movies));}
 }
 
 class Rental{
-  constructor(data){
+  constructor(data, movies){
     this._data = data;
+    this._movies = movies;
   }
 
   get days() {return this._data.days;}
@@ -19,7 +21,7 @@ class Rental{
 }
 
 function statement(customerArg, movies) {
-  const customer = new Customer(customerArg);
+  const customer = new Customer(customerArg, movies);
 
   let result = `Rental Record for ${customer.name}\n`;
 

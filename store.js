@@ -18,6 +18,7 @@ class Rental{
 
   get days() {return this._data.days;}
   get movieID() {return this._data.movieID;}
+  get movie() {return this._movies[this.movieID];}
 }
 
 function statement(customerArg, movies) {
@@ -49,7 +50,7 @@ function statement(customerArg, movies) {
   }
 
   function getMovie(rental){
-    return movies[rental.movieID];
+    return rental.movie;
   }
 
   function getFrequentRenterPoints(rental){

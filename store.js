@@ -6,11 +6,21 @@ class Customer {
   }
 
   get name(){return this._data.name;}
-  get rentals() { return this._data.rentals }
+  get rentals() {return this._data.rentals.map(r => new Rental(r));}
+}
+
+class Rental{
+  constructor(data){
+    this._data = data;
+  }
+
+  get days() {return this._data.days;}
+  get movieID() {return this._data.movieID;}
 }
 
 function statement(customerArg, movies) {
   const customer = new Customer(customerArg);
+
   let result = `Rental Record for ${customer.name}\n`;
 
   for (let rental of customer.rentals) {
